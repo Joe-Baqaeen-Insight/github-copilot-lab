@@ -33,6 +33,10 @@ function calculate(operand1, operand2, operation) {
         case '/':
             uri += "?operation=divide";
             break;
+        case '^':
+            setValue(Math.pow(operand1, operand2));
+            state = states.complete;
+            return;
         default:
             setError();
             return;
